@@ -1,0 +1,33 @@
+{
+  "name": "ai-api-optimizer",
+  "version": "0.1.0",
+  "description": "AI API Cost Optimizer - Middleware that cuts AI bills by 20-40%",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "api",
+    "optimizer",
+    "cost",
+    "cache",
+    "middleware"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-cache": "^5.1.2",
+    "openai": "^4.20.1",
+    "lowdb": "^7.0.1",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
