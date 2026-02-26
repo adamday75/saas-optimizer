@@ -5,3 +5,17 @@ data/
 .DS_Store
 coverage/
 dist/
+# .env.example
+# ------------ OpenAI ------------
+OPENAI_API_KEY=sk-XXXXXXXXXXXXXXXXXXXXXXXX
+
+# ------------ Stripe ------------
+STRIPE_SECRET_KEY=sk_test_XXXXXXXXXXXXXXXXXXXXXX
+STRIPE_WEBHOOK_SECRET=whsec_XXXXXXXXXXXXXXXXXXXXXX
+PRICE_BASIC_ID=price_XXXXXXXXXXXXXXXXXXXXXX   # ← the price ID you created in Stripe
+
+# ------------ Optimizer ------------
+ROOT_URL=https://ai-optimizer.backend.io   # ← Fly.io / Render url
+ENABLE_CACHE=true
+ENABLE_SMART_ROUTING=true
+CACHE_TTL=300
