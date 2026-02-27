@@ -5,7 +5,7 @@ data/
 .DS_Store
 coverage/
 dist/
-# .env.example
+# 
 # ------------ OpenAI ------------
 OPENAI_API_KEY=sk-XXXXXXXXXXXXXXXXXXXXXXXX
 
