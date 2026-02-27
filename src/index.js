@@ -91,7 +91,7 @@ app.get('/', async (req, res) => {
     <h2>Recent Requests</h2>
     <table>
       <tr><th>Time</th><th>Provider</th><th>Model</th><th>Cost</th><th>Tokens</th><th>Cache</th></tr>
-      ${stats.recentRequests.map(req => \`
+      ${stats.recentRequests.map(req => `
         <tr>
           <td>\${new Date(req.timestamp).toLocaleTimeString()}</td>
           <td>\${req.provider}</td>
