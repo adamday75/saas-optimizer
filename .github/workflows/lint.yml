@@ -12,3 +12,6 @@ jobs:
       - name: Fail Build on Lint Errors
         if: failure()
         run: exit 1
++ rules: {
++   "space-before-function-paren": ["error", "never"]
++ }
