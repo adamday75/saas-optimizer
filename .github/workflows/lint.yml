@@ -1,0 +1,14 @@
+# .github/workflows/lint.yml
+name: ESLint Linting
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm install
+      - run: npx eslint .
+      - name: Fail Build on Lint Errors
+        if: failure()
+        run: exit 1
