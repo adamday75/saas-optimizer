@@ -95,7 +95,7 @@ app.get('/', async (req, res) => {
         <tr>
           <td>\${new Date(req.timestamp).toLocaleTimeString()}</td>
           <td>\${req.provider}</td>
-          <td>${req.model}${req.originalModel && req.originalModel !== req.model ? ` (${req.originalModel})` : ''}</td>
+          <td>${req.model}${req.originalModel && req.originalModel !== req.model ? ` (${req.originalModel})` : ''}</td> 
           <td>$\${req.cost?.toFixed(4) || '0.0000'}</td>
           <td>\${req.tokens || 0}</td>
           <td><span class="badge \${req.cacheHit ? 'hit' : 'miss'}">\${req.cacheHit ? 'HIT' : 'MISS'}</span></td>
