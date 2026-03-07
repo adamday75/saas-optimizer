@@ -1,4 +1,4 @@
-echo '{
+{
   "build": {
     "env": {
       "NODE_VERSION": "22.22.1"
