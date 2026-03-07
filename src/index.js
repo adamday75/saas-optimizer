@@ -93,14 +93,15 @@ app.get('/', async (req, res) => {
       <tr><th>Time</th><th>Provider</th><th>Model</th><th>Cost</th><th>Tokens</th><th>Cache</th></tr>
       ${stats.recentRequests.map(req => `
         <tr>
-          <td>\${new Date(req.timestamp).toLocaleTimeString()}</td>
-          <td>\${req.provider}</td>
+          <td>${new Date(req.timestamp).toLocaleTimeString()}</td>
+          <td>${req.provider}</td>
           <td>${req.model}${req.originalModel && req.originalModel !== req.model ? ` (${req.originalModel})` : ''}</td> 
-          <td>$\${req.cost?.toFixed(4) || '0.0000'}</td>
-          <td>\${req.tokens || 0}</td>
-          <td><span class="badge \${req.cacheHit ? 'hit' : 'miss'}">\${req.cacheHit ? 'HIT' : 'MISS'}</span></td>
-        </tr>\`).join('')}
-      \${stats.recentRequests.length === 0 ? '<tr><td colspan="6" style="text-align:center">No requests yet</td></tr>' : ''}
+          <td>$${req.cost?.toFixed(4) || '0.0000'}</td>
+          <td>${req.tokens || 0}</td>
+          <td><span class="badge ${req.cacheHit ? 'hit' : 'miss'}">${req.cacheHit ? 'HIT' : 'MISS'}</span></td>
+        </tr>
+      `).join('')}
+      ${stats.recentRequests.length === 0 ? '<tr><td colspan="6" style="text-align:center">No requests yet</td></tr>' : ''}
     </table>
   </div>
 </body>
@@ -112,5 +113,5 @@ app.get('/', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(\`🚀 AI Optimizer running on http://localhost:\${PORT}\`);
+  console.log(`🚀 AI Optimizer running on http://localhost:${PORT}`);
 });
