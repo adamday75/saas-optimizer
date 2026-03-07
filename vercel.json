@@ -1,8 +1,10 @@
-{
+echo '{
   "build": {
     "env": {
       "NODE_VERSION": "22.22.1"
     }
   },
-  "nodeVersion": "22.22.1"
-}
+  "nodeVersion": "22.22.1",
+  "experimental": {
+    "disableCache": true
+  }
